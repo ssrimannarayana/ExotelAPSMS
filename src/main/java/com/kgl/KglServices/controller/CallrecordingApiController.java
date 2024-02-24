@@ -46,7 +46,7 @@ public class CallrecordingApiController {
 
 	@GetMapping("/testApi")
 	public String test() {
-		return "hi";
+		return "hi welcome ap sms test";
 	}
 
 	@PostMapping("/ExotelSmsAP")
