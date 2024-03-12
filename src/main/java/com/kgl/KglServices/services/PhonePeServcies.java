@@ -178,6 +178,7 @@ public class PhonePeServcies {
 	public Map<String, String> sendSMSByScript(ScriptObj product) throws ParseException {
 		String phpeLink = product.getPaylink();
 		String StatusCallback = serverUrl + "/call/exotelSmsCallBack/" + product.getSno();
+		//https://services.kanakadurgafinance.in:9099/EXOTELAPSMS/call/exotelSmsCallBack
 		String btext = getSms(product);
 		String from = "KKDFIN";
 		String toPerson = product.getPhone();
@@ -186,7 +187,7 @@ public class PhonePeServcies {
 		map.add("From", from);
 		map.add("To", toPerson);
 		map.add("Body", body);
-		// map.add("StatusCallback", StatusCallback);
+		map.add("StatusCallback", StatusCallback);
 		map.add("CustomField", "venkey");
 		map.add("ShortenUrl", "true");
 		map.add("ShortenUrlParams[Tracking]", "true");
